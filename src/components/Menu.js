@@ -7,11 +7,16 @@ import { Entypo } from "@expo/vector-icons";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
-export default function Menu({ onPress }) {
+export default function Menu({ onPressAddGroup, onPressChat, onPressMore }) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.iconView}>
-        <FontAwesome name="wechat" size={30} color="#3399cc" />
+        <FontAwesome
+          name="wechat"
+          size={30}
+          color="#3399cc"
+          onPress={onPressChat}
+        />
         <Text style={styles.txt}> Chat</Text>
       </View>
       <View style={styles.iconView}>
@@ -19,12 +24,12 @@ export default function Menu({ onPress }) {
           name="account-group"
           size={30}
           color="#3399cc"
-          onPress={onPress}
+          onPress={onPressAddGroup}
         />
         <Text style={styles.txt}> Group</Text>
       </View>
       <View style={styles.iconView}>
-        <Entypo name="menu" size={30} color="#3399cc" />
+        <Entypo name="menu" size={30} color="#3399cc" onPress={onPressMore} />
         <Text style={styles.txt}> More</Text>
       </View>
     </SafeAreaView>

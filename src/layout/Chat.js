@@ -42,7 +42,10 @@ export default function Chat({ navigation }) {
           />
         </ScrollView>
         <View>
-          <Menu />
+          <Menu
+            onPressAddGroup={() => navigation.navigate("AddGroup")}
+            onPressMore={() => navigation.navigate("More")}
+          />
         </View>
       </View>
     </SafeAreaView>

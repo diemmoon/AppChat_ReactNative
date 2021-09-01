@@ -14,12 +14,17 @@ import User from "../components/User2";
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-export default function Message() {
+export default function Message({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <View style={styles.header}>
-          <Ionicons name="arrow-back-outline" size={26} color="white" />
+          <Ionicons
+            name="arrow-back-outline"
+            size={26}
+            color="white"
+            onPress={() => navigation.navigate("Chat")}
+          />
           <View style={styles.userView}>
             <User image={img1} name="Khủng long" message="Đang hoạt động" />
           </View>

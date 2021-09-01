@@ -22,8 +22,8 @@ export const styles = StyleSheet.create({
     height: 40,
     width: (windowWidth * 95) / 100,
     backgroundColor: "#ddd",
-    marginTop: 10,
-    marginBottom: 20,
+    marginTop: 5,
+    // marginBottom: 20,
     paddingLeft: 10,
     borderRadius: 20,
     flexDirection: "row",
@@ -43,5 +43,6 @@ export const styles = StyleSheet.create({
   listChat: {
     height: (windowHeight * 75) / 100,
     minHeight: (windowHeight * 75) / 100,
+    marginTop: 20,
   },
 });
